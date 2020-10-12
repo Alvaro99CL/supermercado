@@ -6,8 +6,8 @@ public class ProductoPrecioVariable extends Producto {
 	private String unidadMedida;
 	
 	
-	public ProductoPrecioVariable(String id, String descripcion, double tarifaIva, double cantidad, double precioUM,
-			String unidadMedida) {
+	public ProductoPrecioVariable(String id, String descripcion, double tarifaIva,
+			String unidadMedida, double cantidad, double precioUM) {
 		super(id, descripcion, tarifaIva);
 		this.cantidad = cantidad;
 		this.precioUM = precioUM;
