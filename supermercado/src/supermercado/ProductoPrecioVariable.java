@@ -14,11 +14,6 @@ public class ProductoPrecioVariable extends Producto {
 		this.unidadMedida = unidadMedida;
 	}
 	
-	@Override
-	public double getValorIva() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 	public double getCantidad() {
 		return cantidad;
 	}
@@ -44,9 +39,13 @@ public class ProductoPrecioVariable extends Producto {
 	}
 
 	@Override
+	public double getValorIva() {
+		return getPrecioUM() * getCantidad() * getTarifaIva();
+	}
+	
+	@Override
 	public double getValorVenta() {
-		// TODO Auto-generated method stub
-		return 0;
+		return getPrecioUM() * getCantidad() + getValorIva();
 	}
 	
 	@Override
