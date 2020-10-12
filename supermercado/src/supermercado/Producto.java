@@ -1,6 +1,6 @@
 package supermercado;
 
-public class Producto {
+public abstract class Producto {
 	private String id;
 	private String descripcion;
 	private double tarifaIva;
@@ -35,5 +35,8 @@ public class Producto {
 		return "Producto [id=" + id + ", descripcion=" + descripcion + ", tarifaIva=" + tarifaIva + "]";
 	}
 	
+	public abstract double getValorIva();
+	
+	public abstract double getValorVenta();
 	
 }
